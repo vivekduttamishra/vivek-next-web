@@ -1,0 +1,54 @@
+.horizontal-list-container {
+  margin: 20px 0;
+  padding: 0 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.horizontal-list-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+  width: 100%;
+}
+
+.horizontal-list-scroller {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(var(--min-item-width), var(--max-item-width));
+  overflow-x: auto;
+  gap: var(--gap);
+  padding-bottom: 20px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.horizontal-list-item {
+  scroll-snap-align: start;
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.horizontal-list-scroller::-webkit-scrollbar {
+  height: 8px;
+}
+
+.horizontal-list-scroller::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 767px) {
+  .horizontal-list-scroller {
+    grid-auto-columns: var(--min-item-width);
+  }
+}

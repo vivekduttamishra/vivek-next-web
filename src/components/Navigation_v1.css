@@ -1,0 +1,56 @@
+/* Fullscreen offcanvas */
+.custom-offcanvas {
+  width: 100vw !important;
+  max-width: 100% !important;
+  background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+/* Faded background image */
+.menu-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* Ensure content is above the backdrop */
+.custom-offcanvas .offcanvas-header,
+.custom-offcanvas .offcanvas-body {
+  position: relative;
+  z-index: 1;
+}
+
+/* Menu item styling */
+.custom-offcanvas .nav-link {
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.custom-offcanvas .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Sub-menu styling */
+.sub-menu {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+.sub-menu .nav-link {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+}
+
+/* Close button styling */
+.btn-close {
+  filter: invert(1);
+  opacity: 0.8;
+}

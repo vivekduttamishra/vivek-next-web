@@ -1,0 +1,55 @@
+.podcast-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.episode {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.episode h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.date {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.description {
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.platform-links {
+  margin-top: 15px;
+}
+
+.platform-links a {
+  margin-right: 10px;
+  color: #1DB954; /* Spotify green */
+  text-decoration: none;
+}
+
+.platform-links a:hover {
+  text-decoration: underline;
+}
+
+audio {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.episode-image {
+  max-width: 200px !important;
+  max-height:200px;
+  width:200px;
+  height:200px;  
+  margin-bottom: 15px;
+  border-radius: 4px;
+}

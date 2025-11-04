@@ -1,0 +1,22 @@
+.carousel-container {
+  margin: 0 auto;
+  width:100%;
+  max-width: 400px;
+ 
+}
+
+/* style={{ width: '100%', margin: '0 auto', maxWidth: '400px' }} */
+
+.slider-container{
+  
+  padding: 5px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover-image,.slider-image {
+  width: 50%; 
+  height: auto;
+  border-radius: 8px;
+}

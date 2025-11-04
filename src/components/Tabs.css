@@ -1,0 +1,47 @@
+/* Tabs */
+.tabs-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.tabs-header {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.tab-button.active {
+  border-bottom: 3px solid #ff9900;
+  color: #ff9900;
+}
+
+.tab-content {
+  padding: 20px 0;
+}
+
+/* Tabs Container */
+.tabs-container {
+  width: 100%;
+ 
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tabs-header {
+  display: flex;
+  overflow-x: auto; /* Only tabs will scroll horizontally */
+  min-width: fit-content; /* Allows horizontal scroll */
+}
+
+.tab-button {
+  flex-shrink: 0; /* Prevents tab squeezing */
+  padding: 10px 15px;
+}

@@ -1,0 +1,26 @@
+.cover-thumb{
+  width:120px;
+}
+
+.book-link{
+  display:flex;
+  flex-direction:column;
+  text-decoration:none;
+  color:#666;
+  font-size:0.8rem;
+}
+
+.book-link p{
+  overflow:hidden;
+  width:100%;
+  text-overflow: ellipsis;
+  text-align: center;
+  
+}
+
+.book-list-item .horizontal-list-item{
+  
+  width:150px;
+  height:auto !important;
+
+}

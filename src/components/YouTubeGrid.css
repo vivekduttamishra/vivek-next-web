@@ -1,0 +1,184 @@
+.youtube-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+
+.youtube-container a{
+  text-decoration: none;
+}
+
+.youtube-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+.youtube-card {
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #fff;
+}
+
+.youtube-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.youtube-thumbnail {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.youtube-info {
+  padding: 15px;
+}
+
+.youtube-title {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.3;
+}
+
+.youtube-description {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.youtube-date {
+  margin: 0;
+  font-size: 12px;
+  color: #999;
+}
+
+.youtube-loading,
+.youtube-error,
+.youtube-empty {
+  padding: 30px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.youtube-error {
+  color: #d32f2f;
+  background: #fdecea;
+  border-radius: 8px;
+}
+
+.youtube-help {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.load-more-container {
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.load-more-btn {
+  padding: 12px 24px;
+  background: #0d6949;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  min-width: 200px;
+}
+
+.load-more-btn:hover {
+  background: #cc0000;
+}
+
+.load-more-btn:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .youtube-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .youtube-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .youtube-thumbnail {
+    height: 200px;
+  }
+}
+
+.youtube-thumbnail {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Show full image without cropping */
+  display: block;
+  border-bottom: 1px solid #eee;
+  background-color: #f5f5f5; /* Fallback background */
+}
+
+/* Alternative stretched version (uncomment to use instead) */
+/*
+.youtube-thumbnail {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+*/
+
+.youtube-card {
+  /* Add fixed aspect ratio for consistent card sizes */
+  aspect-ratio: 16/9; /* Standard video aspect ratio */
+  display: flex;
+  flex-direction: column;
+}
+
+.youtube-info {
+  flex-grow: 1; /* Push info to bottom */
+  padding: 15px;
+}
+
+/* For browsers that don't support aspect-ratio */
+@supports not (aspect-ratio: 16/9) {
+  .youtube-card::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+  }
+  
+  .youtube-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .youtube-card {
+    position: relative;
+  }
+  
+  .youtube-info {
+    position: relative;
+  }
+}

@@ -1,0 +1,46 @@
+.horizontal-list-container {
+  margin: 20px 0;
+  padding: 0 15px;
+  width:100%;
+  /* border:1px solid red; */
+  
+}
+
+.horizontal-list-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+  display:block;
+}
+
+.horizontal-list-scroller {
+  width:100%;
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 20px;
+  scrollbar-width: thin;
+  /* border: 1px solid green; */
+}
+
+.horizontal-list-scroller::-webkit-scrollbar {
+  height: 8px;
+}
+
+.horizontal-list-scroller::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.horizontal-list-item {
+  min-width: 150px;
+  max-width: 200px;
+  display: flex;
+  flex: 0 0 auto;
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+}

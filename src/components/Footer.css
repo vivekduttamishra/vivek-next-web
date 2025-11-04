@@ -1,0 +1,14 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 998; /* Below navbar but above other content */
+  display: flex;
+  justify-content: center;
+  height:var(--footer-height)
+  
+}
